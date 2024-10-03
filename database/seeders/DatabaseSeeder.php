@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $u = new Unit;
         $u->name = 'marine';
         $u->description = 'man with gun';
+        $u->image_path = '/img/marine.webp';
         $u->hp = 45;
         $u->armor = 0;
         $u->speed = 3.15;
@@ -37,6 +38,7 @@ class DatabaseSeeder extends Seeder
         $u = new Unit;
         $u->name = 'zergling';
         $u->description = 'the destroyer of worlds if no AOE';
+        $u->image_path = '/img/zergling.webp';
         $u->hp = 35;
         $u->armor = 0;
         $u->speed = 4.13;
@@ -49,6 +51,7 @@ class DatabaseSeeder extends Seeder
         $u = new Unit;
         $u->name = 'hydralisk';
         $u->description = 'expensive marine with no hitscan';
+        $u->image_path = '/img/hydralisk.webp';
         $u->hp = 90;
         $u->armor = 0;
         $u->speed = 3.15;

@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
+            $table->string('image_path')->default('img/default.png');
             $table->integer('hp');
             $table->integer('armor');
             $table->float('speed');
             $table->integer('attack_number');
             $table->integer('attack_damage');
             $table->float('attack_speed');
-            $table->string('image_path')->default('img/default.png');
             $table->integer('price_minerals')->default(0);
             $table->integer('price_vespene')->default(0);
             $table->timestamps();
