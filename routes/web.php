@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,22 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/units', function () {
-    // chercher les ressources dans la bdd
-    $units = \App\Models\Unit::all();
+//Route::get('/units', [UnitController::class, 'index']);
+//
+//Route::get('/units/create', [UnitController::class, 'create']);
+//
+//Route::post('/units', [UnitController::class, 'store']);
+//
+//Route::get('/units/{unit}', [UnitController::class, 'show']);
+//
+//Route::get('/units/{unit}/edit', [UnitController::class, 'edit']);
+//
+//Route::patch('/units/{unit}', [UnitController::class, 'update']);
+//
+//Route::delete('/units/{unit}', [UnitController::class, 'destroy']);
 
-    // envoyer a la vue
-//    return view('index', [
-//        'units' => $units
-//    ]);
-
-    return view('index', compact('units'));
-});
-
-
-Route::get('/units/{id}', function ($id) {
-    // chercher l'unit à l'id
-    $unit = \App\Models\Unit::find($id);
-    // envoie a la vue show
-    return view('show', compact('unit'));
-});
+Route::resource('/units', UnitController::class);
